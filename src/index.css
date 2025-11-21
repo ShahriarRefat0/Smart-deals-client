@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default;
+ }
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #632EE3;
+  --color-secondary: teal;
+}
+
+/* Custom button override */
+.btn-primary {
+  @apply bg-gradient-to-r from-[#632EE3] to-[#9F62F2] border-none text-white;
+}
+.btn-primary:hover {
+  @apply opacity-90;
+}
+
+
+.animated-logo {
+  background: linear-gradient(90deg,
+      #ff0080,
+      #ff8c00,
+      #40e0d0,
+      #8a2be2,
+      #ff0080);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colorFlow 6s linear infinite;
+}
+
+@keyframes colorFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
